@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"> 
+  <title>:: URSA ::</title>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/requirejs-plugins/lib/require.js"></script>
+  <script>
+    requirejs.config({
+	waitSeconds : 120,
+	baseUrl : 'bower_components',
+	paths : {
+	  'app' : '../js/app',
+	  'async' : 'requirejs-plugins/src/async',
+	  'jquery' : 'jquery/dist/jquery',
+	  'config' : '../js/config',
+	}
+    });
+	</script>
+	<link rel="stylesheet" href="css/index.css">
+	<script>requirejs(['app/index']);</script>
+	</head>
+	<body>
+		<div id="map-canvas"></div>
+	</body>
+</html>

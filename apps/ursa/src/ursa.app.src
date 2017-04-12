@@ -1,0 +1,17 @@
+{application, ursa,
+ [{description, "Software Servidor de Mensajeria"},
+  {vsn, "1.0.0"},
+  {registered, [ursa_sup, process_list, storage, storagedb, tcp_server]},
+  {included_applications, [cowboy]},
+  {mod, { ursa_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    sasl
+   ]},
+  {env,[]},
+  {modules, []},
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.
