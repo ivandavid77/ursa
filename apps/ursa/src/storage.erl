@@ -18,10 +18,12 @@ get_record(Id) ->
 
 init(_Args) ->
     process_flag(trap_exit, true),
+    File = code:priv_dir(ursa) ++ "/" ++ ?DBNAME,
     Opts = [{auto_save, infinity},
             {repair, true},
             {type, set},
             {ram_file, true},
+            {file, File},
             {keypos, #bus_record.id}],
     case dets:open_file(?DBNAME, Opts) of
         {ok, ?DBNAME} ->

@@ -44,7 +44,6 @@ init([]) ->
     ChildSpecList = [
         child(storage),
         child(process_list),
-        child(ranch_sup),
         child(cowboy_sup)
     ],
     {ok, {RestartFlags, ChildSpecList} }.
